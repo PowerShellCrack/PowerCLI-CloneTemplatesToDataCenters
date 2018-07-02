@@ -82,9 +82,9 @@
 #>
 [CmdletBinding()]
     Param (
-    [string]$SourceVC = "$Env:COMPUTERNAME",
+    [string]$SourceVC = "",
     [String[]]$SourceTemplates = @('WINSVR2016STD','WINSVR2012R2STD'),
-    [String[]]$DestinationVCs = @($Env:COMPUTERNAME),
+    [String[]]$DestinationVCs = @(),
     [string]$DestinationNetwork,
     [string]$DatastoreSearch = ‘content’,
     [string]$TemplateFolder = 'Template‘,
