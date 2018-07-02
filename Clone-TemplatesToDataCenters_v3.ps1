@@ -1,6 +1,6 @@
 ﻿<#
 .SYNOPSIS
-    Replicates vmWare templates across multiple
+    Replicates vmWare templates across multiple unlinked vCenters
 .DESCRIPTION
     This script will clone a template, then move the vm to a destination vCenter
     If more than one destination vCenter is specified it will clone the template multiple
@@ -17,7 +17,6 @@
 .PARAMETER Datastoresearch
     Search for a datastore name that contains this value Default value is "content"
     uses Regex to search
-
 .PARAMETER TemplateFolder
     Search for a folder in the datastore that contains this value Default is "Template"
     This uses Regex to search.
