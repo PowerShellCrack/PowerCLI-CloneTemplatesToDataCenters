@@ -563,7 +563,7 @@ ForEach ($DestinationVC in $DestinationVCs) {
         $IsDistributedSwitch = Get-VirtualPortGroup -Server $DestinationVC | Where-Object {$_.Key -like "dvportgroup-*"}
         If ($IsDistributedSwitch) {
             Write-Host ("{0} INFO: vCenter Server is configured with distributed switches" -f $DestVCShortName) -ForegroundColor Gray
-            $SwitchSearch = Get-VDSwitch -Server $DestinationVC | Where-Object {$_.Name -match $DestinationSwitch}
+            $SwitchSearch = Get-VDSwitch -Server $DestinationVC -VMHost $DestResourcePool | Where-Object {$_.Name -match $DestinationSwitch}
             $DestSwitch = $SwitchSearch[(Get-Random -Maximum ($SwitchSearch).count)]
             $PortGroupSearch = Get-VDPortgroup -VDSwitch $DestSwitch -Server $DestinationVC | Where-Object {$_.Name -match $DestinationNetwork -and $_.Name -notmatch $IgnoreNetworks} 
             $DestPortGroup  = $PortGroupSearch[(Get-Random -Maximum ($PortGroupSearch).count)]
