@@ -30,7 +30,7 @@ Using PoweCLI to clone templates across multiple vCenter's that are not linked.
           Define source vCenter with Templates. Can be multiple (separate by commas within parenthesis)
      . PARAMETER SourceTemplates
           Define source Templates names. Must be exact. Can be multiple (separate by commas within parenthesis). 
-          Default values are "WINSVR2Ol6STD" and "WINSVR2012R2STD"
+          Default values are "WINSVR2O16STD" and "WINSVR2012R2STD"
      .PARAMETER DestinationVCs
           Define source destination vCenter to transfer Templates. Can be multiple (separate by commas within parenthesis)
      .PARAMETER DestinationNetwork
