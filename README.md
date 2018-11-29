@@ -1,4 +1,4 @@
-# PowerCLI-CloneTemplatesToDataCenters_
+# Clone Templates To DataCenters using PowerCLI
 Using PoweCLI to clone templates across multiple vCenter's that are not linked. 
 
 # Pseudocode
